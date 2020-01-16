@@ -16,10 +16,10 @@
             var h = window.innerHeight;
             function setup() {
                 //This creates a canvas that is X and Y
-                createCanvas(w, h, WEBGL);
+                createCanvas(w, h, /*WEBGL*/);
             }
             function draw() {
-                //background("red");
+                /*//background("red");
                 //circle(mouseX,mouseY,100);
                 //rect(100,100,mouseX,mouseY);
                 //I will rotate around the Y axis when I move my mouse horizonatally. I will divide by 100 to decrease mouse sentitvity
@@ -29,8 +29,12 @@
                 fill("green");
                 triangle(30, 75, 58, 20, 86, 75);
                 fill("blue");
-                rect(60,190,50,50);
-                noStroke();
+                rect(60,190,50,50);*/
+                if (mouseIsPressed) {
+                    fill("black")
+                    circle(mouseX,mouseY,20);
+                    noStroke();
+                }
             }
         </script>
     </body>
