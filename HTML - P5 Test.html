@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url("mb20.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var bImage;
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            function setup() {
+                //This creates a canvas that is X and Y
+                createCanvas(w, h, WEBGL);
+            }
+            function draw() {
+                //background("red");
+                //circle(mouseX,mouseY,100);
+                //rect(100,100,mouseX,mouseY);
+                //I will rotate around the Y axis when I move my mouse horizonatally. I will divide by 100 to decrease mouse sentitvity
+                rotateX(mouseY/100);
+                //I will rotate around the X axis when I move my mouse vertically. I will divide by 100 to decrease mouse sentitvity
+                rotateY(mouseX/100);
+                fill("green");
+                triangle(30, 75, 58, 20, 86, 75);
+                fill("blue");
+                rect(60,190,50,50);
+                noStroke();
+            }
+        </script>
+    </body>
+</html>
