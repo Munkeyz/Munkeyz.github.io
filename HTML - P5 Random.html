@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="p5.min.js"></script>
+    </head>
+    <body>
+        <script>
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            var speed = 20;
+            function setup() {
+                createCanvas(w, h);
+                //
+                //starting at center
+                x = w/2
+                y = h/2
+                a = w/2
+                b = h/2
+            }
+            //Random placement with random color and size
+            /*function draw() {
+                var x = random(0, w);
+                var y = random(0, h);
+                var a = random(50,101);
+                ellipse(x,y,a,a);
+                fill(random(0,256),random(0,256),random(0,256),random(50,101));
+            }*/
+            //Random king movement 
+            function draw() {
+                x += random(-speed,speed);
+                y += random(-speed,speed);
+                a += random(-speed,speed);
+                b += random(-speed,speed);
+                ellipse(x,y,50,50);
+                fill(random(0,256),random(0,256),random(0,256),random(50,101));
+                ellipse(a,b,50,50);
+                fill(random(0,256),random(0,256),random(0,256),random(50,101));
+            }
+        </script>
+
+    </body>
+</html>
