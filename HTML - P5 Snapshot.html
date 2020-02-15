@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="p5.min.js"></script>
+        <script src="p5.dom.js"></script>
+    </head>
+    <body>
+        <script>
+            var button;
+            var video;
+            function setup() {
+                createCanvas(390,240);
+                video = createCapture(VIDEO);
+                video.size(320,240);
+                button = createButton("CLICK")
+            }
+        </script>
+    </body>
+</html>
